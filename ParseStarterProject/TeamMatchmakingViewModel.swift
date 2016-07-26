@@ -179,7 +179,7 @@ class TeamMatchmakingViewModel: NSObject {
             return nil
         }
         
-        for var index = 0; index < availableTeamsToMatchmake!.count; ++index {
+        for var index = 0; index < availableTeamsToMatchmake!.count; index += 1 {
             
             let opposingTeam = availableTeamsToMatchmake!.objectAtIndex(index) as! LMTeam
             
@@ -226,7 +226,7 @@ class TeamMatchmakingViewModel: NSObject {
         for teamFaced: AnyObject in teamsFaced! {
             let currentTeamFaced = teamFaced as! String
             
-            for var index = 0; index < listOfAllTeams.count; ++index {
+            for var index = 0; index < listOfAllTeams.count; index += 1 {
                 
                 let currentTeam = listOfAllTeams.objectAtIndex(index) as! LMTeam
                 

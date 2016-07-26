@@ -65,7 +65,7 @@ class TeamMatchingViewController: UIViewController, UICollectionViewDataSource, 
         addButton.setTitleColor(UIColor.flatGreenColorDark(), forState: UIControlState.Highlighted)
         addButton.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Right
         addButton.titleLabel!.font = UIFont.maxwellWithSize(42.0)
-        addButton.addTarget(self, action: "addChampionship", forControlEvents: UIControlEvents.TouchUpInside)
+        addButton.addTarget(self, action: Selector("addChampionship"), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(addButton)
         
         let backButton = UIButton(frame: CGRectMake(10, 20, 80, 44))

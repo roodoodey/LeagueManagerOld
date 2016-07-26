@@ -35,7 +35,7 @@ class CategoryOverviewViewController: UIViewController, UITableViewDelegate, UIT
         addButton.setTitleColor(UIColor.flatGreenColorDark(), forState: UIControlState.Highlighted)
         addButton.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Right
         addButton.titleLabel!.font = UIFont.maxwellWithSize(42.0)
-        addButton.addTarget(self, action: "addChampionship", forControlEvents: UIControlEvents.TouchUpInside)
+        addButton.addTarget(self, action: #selector(CategoryOverviewViewController.addChampionship), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(addButton)
         
         let backButton = UIButton(frame: CGRectMake(10, 20, 80, 44))
@@ -44,7 +44,7 @@ class CategoryOverviewViewController: UIViewController, UITableViewDelegate, UIT
         backButton.setTitleColor(UIColor.flatRedColorDark(), forState: UIControlState.Highlighted)
         backButton.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Left
         backButton.titleLabel!.font = UIFont.maxwellBoldWithSize(24.0)
-        backButton.addTarget(self, action: "dismiss", forControlEvents: UIControlEvents.TouchUpInside)
+        backButton.addTarget(self, action: #selector(CategoryOverviewViewController.dismiss), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(backButton)
         
         categoryTableView.frame = CGRectMake(0, 64, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - 64)

@@ -27,7 +27,7 @@ class AddChampionshipViewController: UIViewController {
         navBar.backgroundColor = UIColor.flatTealColor()
         self.view.addSubview(navBar)
         
-        let backgroundTapGesture = UITapGestureRecognizer(target: self, action: "backgroundTap")
+        let backgroundTapGesture = UITapGestureRecognizer(target: self, action: #selector(AddChampionshipViewController.backgroundTap))
         self.view.addGestureRecognizer(backgroundTapGesture)
         
         let appTitleLabel = UILabel(frame: CGRectMake(100, 20, CGRectGetWidth(self.view.frame) - 200, 44))
@@ -43,7 +43,7 @@ class AddChampionshipViewController: UIViewController {
         appCancelButton.setTitle("Cancel", forState: UIControlState.Normal)
         appCancelButton.setTitleColor(UIColor.flatRedColor(), forState: UIControlState.Normal)
         appCancelButton.setTitleColor(UIColor.flatRedColorDark(), forState: UIControlState.Highlighted)
-        appCancelButton.addTarget(self, action: "cancelAdd", forControlEvents: UIControlEvents.TouchUpInside)
+        appCancelButton.addTarget(self, action: #selector(AddChampionshipViewController.cancelAdd), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(appCancelButton)
         
         let appAddButton = UIButton(frame: CGRectMake(CGRectGetWidth(self.view.frame) - 90, 20, 80, 44))
@@ -52,7 +52,7 @@ class AddChampionshipViewController: UIViewController {
         appAddButton.setTitle("Add", forState: UIControlState.Normal)
         appAddButton.setTitleColor(UIColor.flatGreenColor(), forState: UIControlState.Normal)
         appAddButton.setTitleColor(UIColor.flatGreenColorDark(), forState: UIControlState.Highlighted)
-        appAddButton.addTarget(self, action: "addChampionship", forControlEvents: UIControlEvents.TouchUpInside)
+        appAddButton.addTarget(self, action: #selector(AddChampionshipViewController.addChampionship), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(appAddButton)
         
         let championshipNameLabel = UILabel(frame: CGRectMake(CGRectGetMidX(self.view.frame) - 120, CGRectGetHeight(self.view.frame) * 0.2, 240, 50))
@@ -77,7 +77,7 @@ class AddChampionshipViewController: UIViewController {
         startDateButton.setTitle("Start Date", forState: UIControlState.Normal)
         startDateButton.setTitleColor(UIColor.flatBlackColor(), forState: UIControlState.Normal)
         startDateButton.setTitleColor(UIColor.flatGrayColorDark(), forState: UIControlState.Highlighted)
-        startDateButton.addTarget(self, action: "showStartDatePicker", forControlEvents: UIControlEvents.TouchUpInside)
+        startDateButton.addTarget(self, action: #selector(AddChampionshipViewController.showStartDatePicker), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(startDateButton)
         
         endDateButton.frame = CGRectMake(CGRectGetMidX(self.view.frame) + 20, CGRectGetHeight(self.view.frame) * 0.5, 120, 40)
@@ -88,7 +88,7 @@ class AddChampionshipViewController: UIViewController {
         endDateButton.setTitle("End Date", forState: UIControlState.Normal)
         endDateButton.setTitleColor(UIColor.flatBlackColor(), forState: UIControlState.Normal)
         endDateButton.setTitleColor(UIColor.flatGrayColorDark(), forState: UIControlState.Highlighted)
-        endDateButton.addTarget(self, action: "showEndDatePicker", forControlEvents: UIControlEvents.TouchUpInside)
+        endDateButton.addTarget(self, action: #selector(AddChampionshipViewController.showEndDatePicker), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(endDateButton)
         
         datePickerView.frame = CGRectMake(0, CGRectGetHeight(self.view.frame), CGRectGetWidth(self.view.frame), 216.0 + 40)
@@ -115,7 +115,7 @@ class AddChampionshipViewController: UIViewController {
         cancelDateButton.setTitle("Cancel", forState: UIControlState.Normal)
         cancelDateButton.setTitleColor(UIColor.flatWhiteColor(), forState: UIControlState.Normal)
         cancelDateButton.setTitleColor(UIColor.flatGrayColor(), forState: UIControlState.Highlighted)
-        cancelDateButton.addTarget(self, action: "hideDatePicker", forControlEvents: UIControlEvents.TouchUpInside)
+        cancelDateButton.addTarget(self, action: #selector(AddChampionshipViewController.hideDatePicker), forControlEvents: UIControlEvents.TouchUpInside)
         self.datePickerView.addSubview(cancelDateButton)
         
     }
@@ -167,14 +167,14 @@ class AddChampionshipViewController: UIViewController {
     func showStartDatePicker() {
         
         datePickerView.alpha = 1.0
-        acceptButton.addTarget(self, action: "hideStartDatePicker", forControlEvents: UIControlEvents.TouchUpInside)
+        acceptButton.addTarget(self, action: #selector(AddChampionshipViewController.hideStartDatePicker), forControlEvents: UIControlEvents.TouchUpInside)
         
         self.showDatePicker()
     }
     
     func hideStartDatePicker() {
         
-        acceptButton.removeTarget(self, action: "hideStartDatePicker", forControlEvents: UIControlEvents.TouchUpInside)
+        acceptButton.removeTarget(self, action: #selector(AddChampionshipViewController.hideStartDatePicker), forControlEvents: UIControlEvents.TouchUpInside)
         
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy"
@@ -187,14 +187,14 @@ class AddChampionshipViewController: UIViewController {
     func showEndDatePicker() {
         
         datePickerView.alpha = 1.0
-        acceptButton.addTarget(self, action: "hideEndDatePicker", forControlEvents: UIControlEvents.TouchUpInside)
+        acceptButton.addTarget(self, action: #selector(AddChampionshipViewController.hideEndDatePicker), forControlEvents: UIControlEvents.TouchUpInside)
         
         self.showDatePicker()
     }
     
     func hideEndDatePicker() {
         
-        acceptButton.removeTarget(self, action: "hideEndDatePicker", forControlEvents: UIControlEvents.TouchUpInside)
+        acceptButton.removeTarget(self, action: #selector(AddChampionshipViewController.hideEndDatePicker), forControlEvents: UIControlEvents.TouchUpInside)
         
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy"

@@ -21,7 +21,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         self.view.backgroundColor = UIColor.flatTealColor()
         
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
         self.view.addGestureRecognizer(tapGestureRecognizer)
         
         let titleLabel = UILabel(frame: CGRectMake(0, CGRectGetWidth(self.view.frame) * 0.4, CGRectGetWidth(self.view.frame), 24))
@@ -56,7 +56,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         loginButton.setTitle("LOGIN", forState: UIControlState.Normal)
         loginButton.setTitleColor(UIColor.flatWhiteColor(), forState: UIControlState.Normal)
         loginButton.setTitleColor(UIColor.flatGrayColor(), forState: UIControlState.Highlighted)
-        loginButton.addTarget(self, action: "login", forControlEvents: UIControlEvents.TouchUpInside)
+        loginButton.addTarget(self, action: #selector(ViewController.login), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(loginButton)
         
         let signupButton = UIButton(frame: CGRectMake(CGRectGetMidX(self.view.frame) - 60, CGRectGetMaxY(loginButton.frame) + 14, 120, 36))
@@ -66,12 +66,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         signupButton.setTitle("SIGNUP", forState: UIControlState.Normal)
         signupButton.setTitleColor(UIColor.flatWhiteColor(), forState: UIControlState.Normal)
         signupButton.setTitleColor(UIColor.flatGrayColor(), forState: UIControlState.Highlighted)
-        signupButton.addTarget(self, action: "signup", forControlEvents: UIControlEvents.TouchUpInside)
+        signupButton.addTarget(self, action: #selector(ViewController.signup), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(signupButton)
         
         // add the keyboard notifications
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
         
     }
 

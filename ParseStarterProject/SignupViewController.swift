@@ -38,7 +38,7 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate, U
         backButton.titleLabel?.textAlignment = NSTextAlignment.Left
         backButton.setTitleColor(UIColor.flatWhiteColor(), forState: UIControlState.Normal)
         backButton.setTitleColor(UIColor.flatGrayColor(), forState: UIControlState.Highlighted)
-        backButton.addTarget(self, action: "backSegue", forControlEvents: UIControlEvents.TouchUpInside)
+        backButton.addTarget(self, action: #selector(SignupViewController.backSegue), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(backButton)
         
         let appTitleLabel = UILabel(frame: CGRectMake(100, 20, CGRectGetWidth(self.view.frame) - 200, 44))
@@ -56,7 +56,7 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate, U
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.showsVerticalScrollIndicator = false
         
-        let scrollViewTapGesture = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        let scrollViewTapGesture = UITapGestureRecognizer(target: self, action: #selector(SignupViewController.dismissKeyboard))
         scrollView.addGestureRecognizer(scrollViewTapGesture)
         
         self.view.addSubview(scrollView)
@@ -69,7 +69,7 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate, U
         profilePictureImageView.layer.masksToBounds = true
         profilePictureImageView.userInteractionEnabled = true
         
-        let profileTapGesture = UITapGestureRecognizer(target: self, action: "chooseImage")
+        let profileTapGesture = UITapGestureRecognizer(target: self, action: #selector(SignupViewController.chooseImage))
         profilePictureImageView.addGestureRecognizer(profileTapGesture)
         
         scrollView.addSubview(profilePictureImageView)
@@ -115,14 +115,14 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate, U
         signupButton.setTitle("SIGNUP", forState: UIControlState.Normal)
         signupButton.setTitleColor(UIColor.flatWhiteColor(), forState: UIControlState.Normal)
         signupButton.setTitleColor(UIColor.flatGrayColor(), forState: UIControlState.Highlighted)
-        signupButton.addTarget(self, action: "signup", forControlEvents: UIControlEvents.TouchUpInside)
+        signupButton.addTarget(self, action: #selector(SignupViewController.signup), forControlEvents: UIControlEvents.TouchUpInside)
         scrollView.addSubview(signupButton)
         
         scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.view.frame), CGRectGetMaxY(signupButton.frame) + 50)
         
         // add the keyboard notifications
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(SignupViewController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(SignupViewController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
         
     }
     
@@ -167,7 +167,7 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate, U
                                 
                                 if error == nil && succeeded {
                                     print("uploaded file to parse")
-                                    var user = PFUser.currentUser()
+                                    let user = PFUser.currentUser()
                                     user!["someFile"] = imageFile
                                     user?.saveInBackgroundWithBlock({
                                         (succeeded: Bool, error: NSError?) -> Void in
@@ -190,7 +190,7 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate, U
                                 }, progressBlock: {
                                     (percentDone: Int32) -> Void in
                                     print("percent done: %d", percentDone)
-                                    var percent: Float = Float(percentDone) / 100
+                                    let percent: Float = Float(percentDone) / 100
                                     print("float done  \(percent)")
                                     progressHud.progress = percent
                                     

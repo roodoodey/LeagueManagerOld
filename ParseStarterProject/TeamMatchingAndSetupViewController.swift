@@ -82,7 +82,7 @@ class TeamMatchingAndSetupViewController: UIViewController, UICollectionViewData
         backButton.setTitleColor(UIColor.flatRedColorDark(), forState: UIControlState.Highlighted)
         backButton.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Left
         backButton.titleLabel!.font = UIFont.maxwellBoldWithSize(24.0)
-        backButton.addTarget(self, action: "dismiss", forControlEvents: UIControlEvents.TouchUpInside)
+        backButton.addTarget(self, action: #selector(TeamMatchingAndSetupViewController.dismiss), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(backButton)
         
         
@@ -196,7 +196,7 @@ class TeamMatchingAndSetupViewController: UIViewController, UICollectionViewData
             startButton!.setTitle("Start", forState: UIControlState.Normal)
             startButton!.setTitleColor(UIColor.flatRedColorDark(), forState: UIControlState.Normal)
             startButton!.setTitleColor(UIColor.flatRedColor(), forState: UIControlState.Highlighted)
-            startButton!.addTarget(self, action: "startMatchmaking", forControlEvents: UIControlEvents.TouchUpInside)
+            startButton!.addTarget(self, action: #selector(TeamMatchingAndSetupViewController.startMatchmaking), forControlEvents: UIControlEvents.TouchUpInside)
             startButton!.titleLabel?.font = UIFont.maxwellBoldWithSize(21)
             self.view.addSubview(startButton!)
             
@@ -206,7 +206,7 @@ class TeamMatchingAndSetupViewController: UIViewController, UICollectionViewData
             removeTeamButton.titleLabel?.textAlignment = NSTextAlignment.Center
             removeTeamButton.setTitle("-", forState: UIControlState.Normal)
             removeTeamButton.setTitleColor(UIColor.flatRedColorDark(), forState: UIControlState.Normal)
-            removeTeamButton.addTarget(self, action: "deleteSelectedTeam", forControlEvents: UIControlEvents.TouchUpInside)
+            removeTeamButton.addTarget(self, action: #selector(TeamMatchingAndSetupViewController.deleteSelectedTeam), forControlEvents: UIControlEvents.TouchUpInside)
             self.view.addSubview(removeTeamButton)
             
             let addTeamButton = UIButton(frame: CGRectMake(CGRectGetWidth(self.view.frame) - 50, 64 + 15, 30, 30))
@@ -216,7 +216,7 @@ class TeamMatchingAndSetupViewController: UIViewController, UICollectionViewData
             addTeamButton.setTitle("+", forState: UIControlState.Normal)
             addTeamButton.setTitleColor(UIColor.flatGreenColor(), forState: UIControlState.Normal)
             addTeamButton.titleLabel?.font = UIFont.maxwellWithSize(36)
-            addTeamButton.addTarget(self, action: "showAddTeamView", forControlEvents: UIControlEvents.TouchUpInside)
+            addTeamButton.addTarget(self, action: #selector(TeamMatchingAndSetupViewController.showAddTeamView), forControlEvents: UIControlEvents.TouchUpInside)
             self.view.addSubview(addTeamButton)
             
             teamTableView = UITableView(frame: CGRectMake(0, CGRectGetMaxY(startButton!.frame) + 10, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - CGRectGetMaxY(startButton!.frame) - 10), style: UITableViewStyle.Plain)
@@ -224,7 +224,7 @@ class TeamMatchingAndSetupViewController: UIViewController, UICollectionViewData
             teamTableView?.dataSource = self
             teamTableView?.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
             
-            let longPress = UILongPressGestureRecognizer(target: self, action: "longPressGestureForCell:")
+            let longPress = UILongPressGestureRecognizer(target: self, action: #selector(TeamMatchingAndSetupViewController.longPressGestureForCell(_:)))
             view.addGestureRecognizer(longPress)
 
             self.view.addSubview(teamTableView!)
@@ -260,7 +260,7 @@ class TeamMatchingAndSetupViewController: UIViewController, UICollectionViewData
                 nextRoundButton!.setTitle("Next Round", forState: UIControlState.Normal)
                 nextRoundButton!.setTitleColor(UIColor.flatGreenColor(), forState: UIControlState.Normal)
                 nextRoundButton!.setTitleColor(UIColor.flatGreenColorDark(), forState: UIControlState.Highlighted)
-                nextRoundButton!.addTarget(self, action: "nextRoundPressed", forControlEvents: UIControlEvents.TouchUpInside)
+                nextRoundButton!.addTarget(self, action: #selector(TeamMatchingAndSetupViewController.nextRoundPressed), forControlEvents: UIControlEvents.TouchUpInside)
                 nextRoundButton!.titleLabel?.font = UIFont.maxwellBoldWithSize(21)
                 self.view.addSubview(nextRoundButton!)
             }
@@ -277,7 +277,7 @@ class TeamMatchingAndSetupViewController: UIViewController, UICollectionViewData
                 deleteRoundButton!.setTitleColor(UIColor.flatRedColor(), forState: UIControlState.Normal)
                 deleteRoundButton!.setTitleColor(UIColor.flatRedColorDark(), forState: UIControlState.Highlighted)
                 deleteRoundButton!.titleLabel?.font = UIFont.maxwellBoldWithSize(21)
-                deleteRoundButton!.addTarget(self, action: "deleteRoundPressed", forControlEvents: UIControlEvents.TouchUpInside)
+                deleteRoundButton!.addTarget(self, action: #selector(TeamMatchingAndSetupViewController.deleteRoundPressed), forControlEvents: UIControlEvents.TouchUpInside)
                 self.view.addSubview(deleteRoundButton!)
             }
             else {
@@ -351,8 +351,8 @@ class TeamMatchingAndSetupViewController: UIViewController, UICollectionViewData
         }
         addTeamView?.alpha = 1.0
         self.view.bringSubviewToFront(addTeamView!)
-        addTeamView!.acceptButton.addTarget(self, action: "addTeam", forControlEvents: UIControlEvents.TouchUpInside)
-        addTeamView!.dismissButton.addTarget(self, action: "cancelAddTeam", forControlEvents: UIControlEvents.TouchUpInside)
+        addTeamView!.acceptButton.addTarget(self, action: #selector(TeamMatchingAndSetupViewController.addTeam), forControlEvents: UIControlEvents.TouchUpInside)
+        addTeamView!.dismissButton.addTarget(self, action: #selector(TeamMatchingAndSetupViewController.cancelAddTeam), forControlEvents: UIControlEvents.TouchUpInside)
         
     }
     
@@ -578,7 +578,7 @@ class TeamMatchingAndSetupViewController: UIViewController, UICollectionViewData
             matchmakeOrderedButton.setTitleColor(UIColor.flatGreenColor(), forState: UIControlState.Normal)
             matchmakeOrderedButton.titleLabel?.font = UIFont.openSansBoldWithSize(16)
             matchmakeOrderedButton.setTitleColor(UIColor.flatGreenColorDark(), forState: UIControlState.Highlighted)
-            matchmakeOrderedButton.addTarget(self, action: "startOrderedMatchmaking", forControlEvents: UIControlEvents.TouchUpInside)
+            matchmakeOrderedButton.addTarget(self, action: #selector(TeamMatchingAndSetupViewController.startOrderedMatchmaking), forControlEvents: UIControlEvents.TouchUpInside)
             chooseArrangement?.addSubview(matchmakeOrderedButton)
             
             let matchmakeRandomButton = UIButton()
@@ -587,7 +587,7 @@ class TeamMatchingAndSetupViewController: UIViewController, UICollectionViewData
             matchmakeRandomButton.setTitleColor(UIColor.flatSkyBlueColor(), forState: UIControlState.Normal)
             matchmakeRandomButton.setTitleColor(UIColor.flatSkyBlueColorDark(), forState: UIControlState.Highlighted)
             matchmakeRandomButton.titleLabel?.font = UIFont.openSansBoldWithSize(16)
-            matchmakeRandomButton.addTarget(self, action: "startRandomMatchmaking", forControlEvents: UIControlEvents.TouchUpInside)
+            matchmakeRandomButton.addTarget(self, action: #selector(TeamMatchingAndSetupViewController.startRandomMatchmaking), forControlEvents: UIControlEvents.TouchUpInside)
             chooseArrangement?.addSubview(matchmakeRandomButton)
             
         }

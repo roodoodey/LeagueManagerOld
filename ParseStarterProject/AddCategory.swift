@@ -24,7 +24,7 @@ class AddCategory: UIViewController {
         navBar.backgroundColor = UIColor.flatTealColor()
         self.view.addSubview(navBar)
         
-        let backgroundTapGesture = UITapGestureRecognizer(target: self, action: "backgroundTap")
+        let backgroundTapGesture = UITapGestureRecognizer(target: self, action: #selector(AddCategory.backgroundTap))
         self.view.addGestureRecognizer(backgroundTapGesture)
         
         let appTitleLabel = UILabel(frame: CGRectMake(100, 20, CGRectGetWidth(self.view.frame) - 200, 44))
@@ -40,7 +40,7 @@ class AddCategory: UIViewController {
         appCancelButton.setTitle("Cancel", forState: UIControlState.Normal)
         appCancelButton.setTitleColor(UIColor.flatRedColor(), forState: UIControlState.Normal)
         appCancelButton.setTitleColor(UIColor.flatRedColorDark(), forState: UIControlState.Highlighted)
-        appCancelButton.addTarget(self, action: "cancelCategory", forControlEvents: UIControlEvents.TouchUpInside)
+        appCancelButton.addTarget(self, action: #selector(AddCategory.cancelCategory), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(appCancelButton)
         
         let appAddButton = UIButton(frame: CGRectMake(CGRectGetWidth(self.view.frame) - 90, 20, 80, 44))
@@ -49,7 +49,7 @@ class AddCategory: UIViewController {
         appAddButton.setTitle("Add", forState: UIControlState.Normal)
         appAddButton.setTitleColor(UIColor.flatGreenColor(), forState: UIControlState.Normal)
         appAddButton.setTitleColor(UIColor.flatGreenColorDark(), forState: UIControlState.Highlighted)
-        appAddButton.addTarget(self, action: "addCategory", forControlEvents: UIControlEvents.TouchUpInside)
+        appAddButton.addTarget(self, action: #selector(AddCategory.addCategory), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(appAddButton)
         
         let championshipNameLabel = UILabel(frame: CGRectMake(CGRectGetMidX(self.view.frame) - 120, CGRectGetHeight(self.view.frame) * 0.2, 240, 50))
@@ -106,7 +106,7 @@ class AddCategory: UIViewController {
     
     func addCategory() {
         
-        var numberFormatter = NSNumberFormatter()
+        let numberFormatter = NSNumberFormatter()
         numberFormatter.allowsFloats = false
         numberFormatter.minimumIntegerDigits = 1
         
@@ -115,7 +115,7 @@ class AddCategory: UIViewController {
         
         if (categoryTextField.text != "" && numberFormatter.numberFromString(pointsForTieTextField.text!)?.integerValue != nil  && numberFormatter.numberFromString(pointsForWinTextField.text!)?.integerValue != nil) {
             
-            var category = LMCategory.object()
+            let category = LMCategory.object()
             category.name = categoryTextField.text
             category.pointsForTie = numberFormatter.numberFromString(pointsForTieTextField.text!)!
             category.pointsForWin = numberFormatter.numberFromString(pointsForWinTextField.text!)!
