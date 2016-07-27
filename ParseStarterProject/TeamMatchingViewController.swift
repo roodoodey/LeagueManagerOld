@@ -74,7 +74,7 @@ class TeamMatchingViewController: UIViewController, UICollectionViewDataSource, 
         backButton.setTitleColor(UIColor.flatRedColorDark(), forState: UIControlState.Highlighted)
         backButton.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Left
         backButton.titleLabel!.font = UIFont.maxwellBoldWithSize(24.0)
-        backButton.addTarget(self, action: "dismiss", forControlEvents: UIControlEvents.TouchUpInside)
+        backButton.addTarget(self, action: #selector(TeamMatchingViewController.dismiss), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(backButton)
         
         

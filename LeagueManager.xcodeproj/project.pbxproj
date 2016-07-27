@@ -47,6 +47,15 @@
 		8833FA731B3FAA99005DA9A6 /* CategoryOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8833FA721B3FAA99005DA9A6 /* CategoryOverviewViewController.swift */; };
 		8833FA761B3FBE7B005DA9A6 /* AddCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8833FA751B3FBE7B005DA9A6 /* AddCategory.swift */; };
 		8833FA791B3FD177005DA9A6 /* TeamMatchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8833FA781B3FD177005DA9A6 /* TeamMatchingViewController.swift */; };
+		883F86511D48392300D6BDF2 /* MAXBlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 883F86441D48392300D6BDF2 /* MAXBlockButton.m */; };
+		883F86521D48392300D6BDF2 /* MAXBlockSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 883F86461D48392300D6BDF2 /* MAXBlockSwitch.m */; };
+		883F86531D48392300D6BDF2 /* MAXBlockTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 883F86481D48392300D6BDF2 /* MAXBlockTextField.m */; };
+		883F86541D48392300D6BDF2 /* MAXFadeBlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 883F864A1D48392300D6BDF2 /* MAXFadeBlockButton.m */; };
+		883F86551D48392300D6BDF2 /* MAXPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 883F864C1D48392300D6BDF2 /* MAXPageControl.m */; };
+		883F86561D48392300D6BDF2 /* MAXPagingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 883F864E1D48392300D6BDF2 /* MAXPagingScrollView.m */; };
+		883F86571D48392300D6BDF2 /* MAXSelectedContentButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 883F86501D48392300D6BDF2 /* MAXSelectedContentButton.m */; };
+		883F86601D4839DC00D6BDF2 /* MAXDrawerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 883F865F1D4839DC00D6BDF2 /* MAXDrawerView.m */; };
+		883F86631D4839F100D6BDF2 /* UIView+MAXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 883F86621D4839F100D6BDF2 /* UIView+MAXExtension.m */; };
 		886201DE1B519332003CAC97 /* TeamMatchingAndSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886201DD1B519332003CAC97 /* TeamMatchingAndSetupViewController.swift */; };
 		886201EF1B51A7F9003CAC97 /* AddTeamControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 886201EE1B51A7F9003CAC97 /* AddTeamControl.m */; };
 		886201F21B52BD18003CAC97 /* TeamMatchmakingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886201F11B52BD18003CAC97 /* TeamMatchmakingViewModel.swift */; };
@@ -133,6 +142,24 @@
 		8833FA721B3FAA99005DA9A6 /* CategoryOverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryOverviewViewController.swift; sourceTree = "<group>"; };
 		8833FA751B3FBE7B005DA9A6 /* AddCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCategory.swift; sourceTree = "<group>"; };
 		8833FA781B3FD177005DA9A6 /* TeamMatchingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamMatchingViewController.swift; sourceTree = "<group>"; };
+		883F86431D48392300D6BDF2 /* MAXBlockButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXBlockButton.h; sourceTree = "<group>"; };
+		883F86441D48392300D6BDF2 /* MAXBlockButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXBlockButton.m; sourceTree = "<group>"; };
+		883F86451D48392300D6BDF2 /* MAXBlockSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXBlockSwitch.h; sourceTree = "<group>"; };
+		883F86461D48392300D6BDF2 /* MAXBlockSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXBlockSwitch.m; sourceTree = "<group>"; };
+		883F86471D48392300D6BDF2 /* MAXBlockTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXBlockTextField.h; sourceTree = "<group>"; };
+		883F86481D48392300D6BDF2 /* MAXBlockTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXBlockTextField.m; sourceTree = "<group>"; };
+		883F86491D48392300D6BDF2 /* MAXFadeBlockButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXFadeBlockButton.h; sourceTree = "<group>"; };
+		883F864A1D48392300D6BDF2 /* MAXFadeBlockButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXFadeBlockButton.m; sourceTree = "<group>"; };
+		883F864B1D48392300D6BDF2 /* MAXPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXPageControl.h; sourceTree = "<group>"; };
+		883F864C1D48392300D6BDF2 /* MAXPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXPageControl.m; sourceTree = "<group>"; };
+		883F864D1D48392300D6BDF2 /* MAXPagingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXPagingScrollView.h; sourceTree = "<group>"; };
+		883F864E1D48392300D6BDF2 /* MAXPagingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXPagingScrollView.m; sourceTree = "<group>"; };
+		883F864F1D48392300D6BDF2 /* MAXSelectedContentButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXSelectedContentButton.h; sourceTree = "<group>"; };
+		883F86501D48392300D6BDF2 /* MAXSelectedContentButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXSelectedContentButton.m; sourceTree = "<group>"; };
+		883F865E1D4839DC00D6BDF2 /* MAXDrawerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXDrawerView.h; sourceTree = "<group>"; };
+		883F865F1D4839DC00D6BDF2 /* MAXDrawerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXDrawerView.m; sourceTree = "<group>"; };
+		883F86611D4839F100D6BDF2 /* UIView+MAXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MAXExtension.h"; sourceTree = "<group>"; };
+		883F86621D4839F100D6BDF2 /* UIView+MAXExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MAXExtension.m"; sourceTree = "<group>"; };
 		886201DD1B519332003CAC97 /* TeamMatchingAndSetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamMatchingAndSetupViewController.swift; sourceTree = "<group>"; };
 		886201ED1B51A7F9003CAC97 /* AddTeamControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTeamControl.h; sourceTree = "<group>"; };
 		886201EE1B51A7F9003CAC97 /* AddTeamControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTeamControl.m; sourceTree = "<group>"; };
@@ -338,6 +365,7 @@
 			isa = PBXGroup;
 			children = (
 				880DF86C1B3E11C500A7B368 /* NSString Extension */,
+				883F865C1D48398500D6BDF2 /* UIView positioning extension */,
 				880DF8651B3E103A00A7B368 /* UIView image drawing */,
 				880DF8641B3E0E9F00A7B368 /* UIFont cat */,
 				887409241B335BD8002A9C7F /* UIColor classes */,
@@ -419,6 +447,78 @@
 			name = "Team Matching";
 			sourceTree = "<group>";
 		};
+		883F86421D481A2600D6BDF2 /* Reusable components */ = {
+			isa = PBXGroup;
+			children = (
+				883F865A1D48394F00D6BDF2 /* Paging Scroll View & Page Control */,
+				883F865D1D4839C700D6BDF2 /* Drawer View */,
+				883F865B1D48396300D6BDF2 /* Text Field */,
+				883F86581D48392700D6BDF2 /* Buttons */,
+				883F86591D48394300D6BDF2 /* Switch */,
+			);
+			name = "Reusable components";
+			sourceTree = "<group>";
+		};
+		883F86581D48392700D6BDF2 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				883F86491D48392300D6BDF2 /* MAXFadeBlockButton.h */,
+				883F864A1D48392300D6BDF2 /* MAXFadeBlockButton.m */,
+				883F864F1D48392300D6BDF2 /* MAXSelectedContentButton.h */,
+				883F86501D48392300D6BDF2 /* MAXSelectedContentButton.m */,
+				883F86431D48392300D6BDF2 /* MAXBlockButton.h */,
+				883F86441D48392300D6BDF2 /* MAXBlockButton.m */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
+		883F86591D48394300D6BDF2 /* Switch */ = {
+			isa = PBXGroup;
+			children = (
+				883F86451D48392300D6BDF2 /* MAXBlockSwitch.h */,
+				883F86461D48392300D6BDF2 /* MAXBlockSwitch.m */,
+			);
+			name = Switch;
+			sourceTree = "<group>";
+		};
+		883F865A1D48394F00D6BDF2 /* Paging Scroll View & Page Control */ = {
+			isa = PBXGroup;
+			children = (
+				883F864B1D48392300D6BDF2 /* MAXPageControl.h */,
+				883F864C1D48392300D6BDF2 /* MAXPageControl.m */,
+				883F864D1D48392300D6BDF2 /* MAXPagingScrollView.h */,
+				883F864E1D48392300D6BDF2 /* MAXPagingScrollView.m */,
+			);
+			name = "Paging Scroll View & Page Control";
+			sourceTree = "<group>";
+		};
+		883F865B1D48396300D6BDF2 /* Text Field */ = {
+			isa = PBXGroup;
+			children = (
+				883F86471D48392300D6BDF2 /* MAXBlockTextField.h */,
+				883F86481D48392300D6BDF2 /* MAXBlockTextField.m */,
+			);
+			name = "Text Field";
+			sourceTree = "<group>";
+		};
+		883F865C1D48398500D6BDF2 /* UIView positioning extension */ = {
+			isa = PBXGroup;
+			children = (
+				883F86611D4839F100D6BDF2 /* UIView+MAXExtension.h */,
+				883F86621D4839F100D6BDF2 /* UIView+MAXExtension.m */,
+			);
+			name = "UIView positioning extension";
+			sourceTree = "<group>";
+		};
+		883F865D1D4839C700D6BDF2 /* Drawer View */ = {
+			isa = PBXGroup;
+			children = (
+				883F865E1D4839DC00D6BDF2 /* MAXDrawerView.h */,
+				883F865F1D4839DC00D6BDF2 /* MAXDrawerView.m */,
+			);
+			name = "Drawer View";
+			sourceTree = "<group>";
+		};
 		886201EB1B51A4D1003CAC97 /* Collection view subclasses */ = {
 			isa = PBXGroup;
 			children = (
@@ -494,6 +594,7 @@
 		887408F71B33585A002A9C7F /* ParseStarterProject */ = {
 			isa = PBXGroup;
 			children = (
+				883F86421D481A2600D6BDF2 /* Reusable components */,
 				8874091D1B33591D002A9C7F /* ParseStarterProject-Bridging-Header.h */,
 				880257481B3E34990028E08A /* Subclasses */,
 				880DF8631B3E0E9300A7B368 /* Extensions and helpers */,
@@ -796,6 +897,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				883F86601D4839DC00D6BDF2 /* MAXDrawerView.m in Sources */,
 				886201DE1B519332003CAC97 /* TeamMatchingAndSetupViewController.swift in Sources */,
 				887409351B335C0F002A9C7F /* UIViewController+Chameleon.m in Sources */,
 				886201F51B532FA6003CAC97 /* GraySeparatorCollectionReusableView.m in Sources */,
@@ -805,13 +907,17 @@
 				880DF86B1B3E110A00A7B368 /* UIFont+ArialAndHelveticaNeue.m in Sources */,
 				887409001B33585A002A9C7F /* ViewController.swift in Sources */,
 				8833FA6B1B3F8302005DA9A6 /* ChampionshipsOverview.swift in Sources */,
+				883F86551D48392300D6BDF2 /* MAXPageControl.m in Sources */,
 				880DF8681B3E105000A7B368 /* UIView+RenderViewToImage.m in Sources */,
 				8833FA731B3FAA99005DA9A6 /* CategoryOverviewViewController.swift in Sources */,
 				889A1F951B59F27900984CD2 /* LMTeam.m in Sources */,
 				887409331B335C0F002A9C7F /* UIColor+Chameleon.m in Sources */,
+				883F86521D48392300D6BDF2 /* MAXBlockSwitch.m in Sources */,
+				883F86541D48392300D6BDF2 /* MAXFadeBlockButton.m in Sources */,
 				887408FE1B33585A002A9C7F /* ParseStarterProject.xcdatamodeld in Sources */,
 				887409341B335C0F002A9C7F /* UIColor+CIELAB.m in Sources */,
 				8833FA761B3FBE7B005DA9A6 /* AddCategory.swift in Sources */,
+				883F86571D48392300D6BDF2 /* MAXSelectedContentButton.m in Sources */,
 				887680FF1B4EDF62005C9DD7 /* RAReorderableLayout.swift in Sources */,
 				889A1F8D1B59F04900984CD2 /* LMMatch.m in Sources */,
 				88AF23D71B3F23F000DE6EAB /* MBProgressHUD.m in Sources */,
@@ -819,15 +925,19 @@
 				880257951B3E4AD50028E08A /* SignupViewController.swift in Sources */,
 				880DF86F1B3E11F300A7B368 /* NSString+Extension.m in Sources */,
 				887409311B335C0F002A9C7F /* ChameleonStatusBar.m in Sources */,
+				883F86531D48392300D6BDF2 /* MAXBlockTextField.m in Sources */,
 				886201F21B52BD18003CAC97 /* TeamMatchmakingViewModel.swift in Sources */,
 				888492111B59E86200B79611 /* Championship.m in Sources */,
+				883F86631D4839F100D6BDF2 /* UIView+MAXExtension.m in Sources */,
 				8833FA701B3F8DB8005DA9A6 /* AddChampionshipViewController.swift in Sources */,
 				887681031B504405005C9DD7 /* MatchCollectionViewCell.m in Sources */,
 				889A1F891B59EDA700984CD2 /* LMCategory.m in Sources */,
 				8833FA791B3FD177005DA9A6 /* TeamMatchingViewController.swift in Sources */,
 				887409321B335C0F002A9C7F /* NSArray+Chameleon.m in Sources */,
 				8871766F1B40732E0015F483 /* RoundsCollectionViewCell.m in Sources */,
+				883F86561D48392300D6BDF2 /* MAXPagingScrollView.m in Sources */,
 				887408FB1B33585A002A9C7F /* AppDelegate.swift in Sources */,
+				883F86511D48392300D6BDF2 /* MAXBlockButton.m in Sources */,
 				887409201B33591E002A9C7F /* UIColor+Extension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

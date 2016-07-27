@@ -28,3 +28,14 @@
 #import "UIFont+ArialAndHelveticaNeue.h"
 #import "UIColor+Extension.h"
 #import "UIView+RenderViewToImage.h"
+
+// Reusable UI Components
+#import "MAXPageControl.h"
+#import "MAXPagingScrollView.h"
+#import "MAXDrawerView.h"
+#import "MAXBlockTextField.h"
+#import "MAXFadeBlockButton.h"
+#import "MAXSelectedContentButton.h"
+#import "MAXBlockButton.h"
+#import "MAXBlockSwitch.h"
+#import "UIView+MAXExtension.h"
